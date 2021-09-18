@@ -1,8 +1,7 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import style from "./CartItem.module.css";
-import { DeleteModal } from "./Modal";
+
 function CartItem() {
-  const deleteModalRef = useRef(null);
   const [hide, setHide] = useState(false);
 
   const changeHide = () => {
@@ -46,32 +45,17 @@ function CartItem() {
           <div>
             <h4 className={style.item__details_label}>Quantity</h4>
 
-            <div className={style.details__quantity}>
-              <div className={style.details__quantity_buttons}>
-                <button>-</button>
-                <p>2</p>
-                <button>+</button>
-              </div>
-            </div>
+            <div className={style.details__quantity}>2</div>
           </div>
           <div>
             <h4 className={style.item__details_label}>Total Price</h4>{" "}
             <h4>₱ XXX.XX</h4>
           </div>
-          <div>
-            <h4 className={style.item__details_label}>Actions </h4>
-            <button
-              className={style.item__details_delete}
-              onClick={() => {
-                deleteModalRef.current.displayModal();
-              }}
-            >
-              Delete
-            </button>
-          </div>
         </div>
       </div>
-      <DeleteModal ref={deleteModalRef} />
+      <p>
+        Receive by <span className={style.item__delivery}>5</span> working days
+      </p>
     </>
   );
 }

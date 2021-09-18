@@ -10,6 +10,7 @@ import { lazy, Suspense } from "react";
 const Products = lazy(() => import("./pages/Products"));
 const ProductView = lazy(() => import("./pages/ProductView/ProductView"));
 const Cart = lazy(() => import("./pages/Cart/Cart"));
+const Checkout = lazy(() => import("./pages/Checkout/Checkout"));
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/products/:category" component={Products} />
           <Route path="/product/:id" component={ProductView} />
           <Route path="/cart" component={Cart} />
+          <Route path="/checkout" component={Checkout} />
         </Switch>
       </Suspense>
     </Router>
