@@ -1,0 +1,11 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+}
