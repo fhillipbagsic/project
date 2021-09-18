@@ -3,7 +3,7 @@ import { Redirect, Route, Switch, useParams } from "react-router";
 import Filter from "../components/Products/Filter";
 import Gallery from "../components/Products/Gallery";
 import Heading from "../components/Products/Heading";
-
+import Navbar from "../assets/navbar.png";
 function Products() {
   let { category } = useParams();
 
@@ -13,6 +13,7 @@ function Products() {
         <Helmet>
           <title>Innovations | </title>
         </Helmet>
+        <img src={Navbar} alt="" style={{ width: "100%" }} />
         <Heading category={category} />
         <Filter category={category} />
         <Gallery />
@@ -21,6 +22,7 @@ function Products() {
         <Helmet>
           <title>Books | </title>
         </Helmet>
+        <img src={Navbar} alt="" style={{ width: "100%" }} />
         <Heading category={category} />
         <Filter category={category} />
         <Gallery />
@@ -29,6 +31,7 @@ function Products() {
         <Helmet>
           <title>Souvenirs | </title>
         </Helmet>
+        <img src={Navbar} alt="" style={{ width: "100%" }} />
         <Heading category={category} />
         <Filter category={category} />
         <Gallery />
